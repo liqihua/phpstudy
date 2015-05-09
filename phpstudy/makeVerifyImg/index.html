@@ -1,0 +1,17 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<script type="text/javascript">
+		function change(){
+			document.getElementById("vImg").src="getVerifyImg.php?time="+new Date().getTime();
+		}
+		</script>
+	</head>
+	<body>
+		<img id="vImg" src="getVerifyImg.php"/>
+		<button onclick="change()">换一张</button>
+		<form action="doAction.php" method="post">
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+</html>

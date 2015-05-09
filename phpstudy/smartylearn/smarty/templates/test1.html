@@ -1,0 +1,59 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<hr>
+		<ul>
+			<li>{$aa}</li>
+			<li>{$bb}</li>
+		</ul>
+		<hr>
+			<a href="{$arr1[0]}">{$arr1[1]}</a><span>{$arr1[2]}</span>
+
+		<hr>
+		{$arr2[0]}<br>
+		{$arr2['to']}
+
+		<hr>
+		{$arr3[0]}<br>
+		{$arr3['to']}<br>
+		{$arr3['word']['do']}<br>
+		{$arr3['word'][0]}
+
+		<hr>
+		{if isset($num)}
+			{if $num == 5}
+				is 5<br>
+			{elseif $num > 5}
+				bigger than 5
+			{else}
+				small than 5
+			{/if}
+		{/if}
+
+		<hr>
+		<ul>
+			{for $n = 1 to count($arr1)}
+				<li>{$n}</li>
+			{/for}
+		</ul>
+
+		<hr>
+		<ul>
+			{for $aa=1 to 20 max = 5}
+				<li>{$aa}</li>
+			{/for}
+		</ul>
+
+		<hr>
+		<ul>
+			{foreach $arr4 as $person}
+				<li>{$person['name']} | {$person['age']} | {$person['phone']}</li>
+			{/foreach}
+			<br>
+			{foreach $arr4 as $person}
+				<li>{$person.name} | {$person.age} | {$person.phone}</li>
+			{/foreach}
+		</ul>
+	</body>
+</html>
